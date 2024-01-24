@@ -1,0 +1,120 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+.container
+    max-width: 1199px
+    width: 100%
+    margin: 0 auto
+    padding: 0 15px
+
+h1,.h1
+    font-size: 24px
+    font-style: normal
+    font-weight: 500
+    margin: 0 0 24px
+
+h2,.h2
+    font-size: 32px
+    font-weight: 500
+    margin-bottom: 32px
+
+html, body
+    line-height: 1.5
+    color: #fff
+    background-color: #000
+    font-size: 16px
+    font-family: 'Manrope', sans-serif
+    scroll-behavior: smooth
+    position: relative
+    z-index: 1
+
+body
+    min-height: 100vh
+    &.active
+        overflow: hidden
+
+section
+    padding: 60px 0
+
+p
+    font-size: 16px
+
+img
+    max-width: 100%
+
+a,
+button
+    color: #000
+    text-decoration: none
+    transition: all ease .3s
+    background-color: transparent
+    &:active
+        transform: scale(.98)
+
+    &:hover
+        opacity: .8
+
+mark
+    background: transparent
+    color: #000
+
+.btn,
+.btn_outline
+    height: 52px
+    border-radius: 26px
+    color: white
+    border: 1px solid white
+    white-space: nowrap
+    vertical-align: middle
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0 16px
+    &:hover
+        opacity: 1
+
+.btn
+    font-weight: 600
+    background-color: #EDF2F7
+    color: #1A202C
+    min-width: 232px
+    &:hover
+        color: white
+        background-color: transparent
+
+    &_outline
+        &:hover
+            color: black
+            background-color: white
+
+input, select
+    appearance: none
+    border-radius: 12px
+    border: 1px solid rgba(36, 36, 36, 0.07)
+    height: 50px
+    display: block
+    width: 100%
+    margin-bottom: 16px
+    color: #000
+    padding: 0 18px
+    &:placeholder
+        color: #717171
+
+select
+    background-image: url('../img/arrow_down.svg')
+    background-repeat: no-repeat
+    background-position: center right 18px
+    background-size: 20px auto
+
+.wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+
+.nowrap
+    white-space: nowrap

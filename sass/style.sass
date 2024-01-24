@@ -1,0 +1,53 @@
+@import 'normolize'
+@import 'elements'
+@import 'header'
+
+.hero
+    text-align: center
+    min-height: 100vh
+    flex-direction: column
+    justify-content: center
+    background-repeat: no-repeat
+    background-position: center top
+    background-image: url('../img/main.png')
+    background-size: cover
+
+    h1
+        font-size: 72px
+        line-height: 90%
+        font-weight: 600
+        -webkit-text-fill-color: rgba(0, 0, 0, 0)
+        background: -webkit-linear-gradient(270deg,#fff 46.37%,#333333b0 131.5%)
+        -webkit-background-clip: text
+        mark
+            -webkit-text-fill-color: rgba(0, 0, 0, 0)
+            background: linear-gradient(96.08deg,#6459e3 50.06%,#baa7ed 88.46%)
+            -webkit-background-clip: text
+
+    &__text
+        font-size: 20px
+        opacity: 0.6
+        max-width: 580px
+        margin-inline: auto
+        font-size: 18px
+        margin-bottom: 30px
+
+.metrics
+    text-align: center
+    padding: 0 0 96px 
+    .wrap
+        align-items: stretch
+        
+    .item
+        padding: 20px
+        width: 32%
+        border-radius: 70px
+        box-shadow: 1px -1px #ffffff30
+        font-size: 20px
+        color: rgba(255, 255, 255, .4)
+    strong
+        font-weight: normal
+        color: rgba(255, 255, 255, 1)
+        font-size: 42px
+        margin-bottom: 8px
+        display: block
