@@ -7,9 +7,8 @@
 
 .container
     max-width: 1190px
-    width: 100%
+    width: calc( 100% - 32px )
     margin: 0 auto
-    padding: 0 15px
 
 h1,.h1
     font-size: 24px
@@ -49,7 +48,7 @@ img
 
 a,
 button
-    color: #000
+    color: #fff
     text-decoration: none
     transition: all ease .3s
     background-color: transparent
@@ -64,11 +63,11 @@ mark
     color: #000
 
 .btn,
-.btn_outline
+.btn_outline,
+.btn_link
     height: 52px
     border-radius: 26px
     color: white
-    border: 1px solid white
     white-space: nowrap
     vertical-align: middle
     display: inline-flex
@@ -87,7 +86,11 @@ mark
         color: white
         background-color: transparent
 
+    &_link
+        padding: 10px
+
     &_outline
+        border: 1px solid white
         &:hover
             color: black
             background-color: white
@@ -119,3 +122,10 @@ select
 
 .nowrap
     white-space: nowrap
+
+@media screen and ( max-width: 760px )
+    .btn,
+    .btn_outline,
+    .btn_link
+        font-size: 16px
+        height: 42px

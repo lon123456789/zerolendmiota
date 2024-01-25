@@ -1,0 +1,64 @@
+.footer
+    padding: 120px 0 250px
+    background-image: url('../img/footer.png')
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    position: relative
+    z-index: 1
+    overflow: hidden
+    h2
+        line-height: 120%
+    .col
+        max-width: 60%
+    nav
+        width: 174px
+        a
+            display: block
+            &:hover
+                text-decoration: underline
+
+    &__text
+        max-width: 372px
+        opacity: .4
+
+    &__bg
+        margin: 0
+        position: absolute
+        bottom: 0
+        left: 50%
+        white-space: nowrap
+        transform: translateX(-50%)
+        width: 100%
+        text-align: center
+        font-size: 290px
+        line-height: 90%
+        z-index: -1
+        margin: 0
+        opacity: .2
+        font-weight: bold
+        -webkit-text-fill-color: rgba(0,0,0,0)
+        background: -webkit-linear-gradient(270deg, #8a8a8a 1%, rgba(138, 138, 138, 0)100%)
+        -webkit-background-clip: text
+
+    @media screen and ( max-width: 760px )
+        .wrap 
+            display: block
+
+        .col 
+            max-width: 100%
+        
+        nav 
+            width: 100%
+            display: flex
+            position: relative
+            left: -8px
+            flex-wrap: wrap
+            a 
+                padding: 8px
+
+        h2 
+            margin-bottom: 32px
+
+        &__text 
+            margin-bottom: 22px

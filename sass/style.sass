@@ -9,11 +9,12 @@
     flex-direction: column
     justify-content: center
     background-repeat: no-repeat
-    background-image: url('../img/b-1.png'), url('../img/b-2.png'), url('../img/b-3.png'), url('../img/b-4.png'), url('../img/main.png')
-    background-position: right bottom 100px, right bottom, left bottom, left bottom 100px, center top
-    background-size: auto, auto, auto, auto, cover
+    @media screen and ( min-width: 760px )
+        background-image: url('../img/b-1.png'), url('../img/b-2.png'), url('../img/b-3.png'), url('../img/b-4.png'), url('../img/main.png')
+        background-position: right bottom 100px, right bottom, left bottom, left bottom 100px, left top
+        background-size: auto, auto, auto, auto, cover
 
-    h1
+    &__h1
         font-size: 72px
         line-height: 90%
         font-weight: 600
@@ -53,18 +54,37 @@
         margin-bottom: 8px
         display: block
 
-.zero
+.zero, .security
+    overflow: hidden
     text-align: center
     position: relative
-    padding-top: 200px
+    padding-top: 220px
     h2
         font-size: 32px
         margin-bottom: 16px
 
     .container
+        overflow: hidden
         background-image: linear-gradient(to right, rgb(134, 124, 255) -1.22%, rgb(174, 138, 255) 99.86%)
-        padding: 80px
+        padding: 76px
         border-radius: 16px
+        position: relative
+        z-index: 1
+        &::before
+            pointer-events: none
+            content: ''
+            display: block
+            width: 100%
+            height: 100%
+            z-index: -1
+            position: absolute
+            top: 0
+            left: 0
+            background-image: url('../img/zero-3d-right.png'), url('../img/zero-3d-left.png')
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: right center, left center
+            opacity: .2
 
     p
         max-width: 580px
@@ -84,3 +104,76 @@
         top: 0
         left: 0
         width: 100%
+
+.security
+    padding: 80px 0
+    h2
+        font-size: 28px
+    .container
+        background: rgb(14, 14, 14)
+        padding: 32px
+
+    .wrap
+        justify-content: center
+        gap: 20px
+        margin-bottom: 15px
+        a
+            max-width: 50%
+            display: block
+            padding: 20px
+
+@import 'footer'
+
+@media screen and ( max-width: 760px )
+    .hero
+        min-height: 100vh
+        justify-content: flex-end
+        background-image: url('../img/b-5.png'), url('../img/b-6.png'), url('../img/main.png')
+        background-position: right top, right top 100px, left top
+        background-size: auto, auto, cover
+        text-align: left
+        &__h1
+            font-size: 42px
+            line-height: 110%
+
+        .container
+            max-width: 334px
+
+    .metrics
+        .wrap
+            display: block
+            margin: 0
+
+        .item
+            display: block
+            width: 100%
+            margin-bottom: 24px
+            font-size: 16px
+            padding: 12px
+
+        strong
+            font-size: 24px
+            margin-bottom: 4px
+
+    .zero, .security
+        text-align: left
+        p
+            font-size: 16px
+            margin-bottom: 16px
+        .container
+            padding: 32px
+            min-height: 250px
+            &::before
+                background-image: url('../img/zero-3d-right-mob.png')
+                background-size: auto 100%
+                background-position: right bottom
+        h2
+            font-size: 26px
+            margin-bottom: 8px
+            
+    .security
+        .wrap
+            display: block
+            a 
+                max-width: 60%
+                padding: 5px
