@@ -4,13 +4,14 @@
 
 .hero
     text-align: center
-    min-height: 100vh
+    min-height: 111vh
+    padding-bottom: 15vh
     flex-direction: column
     justify-content: center
     background-repeat: no-repeat
-    background-position: center top
-    background-image: url('../img/main.png')
-    background-size: cover
+    background-image: url('../img/b-1.png'), url('../img/b-2.png'), url('../img/b-3.png'), url('../img/b-4.png'), url('../img/main.png')
+    background-position: right bottom 100px, right bottom, left bottom, left bottom 100px, center top
+    background-size: auto, auto, auto, auto, cover
 
     h1
         font-size: 72px
@@ -34,10 +35,10 @@
 
 .metrics
     text-align: center
-    padding: 0 0 96px 
+    padding: 0 0 96px
     .wrap
         align-items: stretch
-        
+
     .item
         padding: 20px
         width: 32%
@@ -51,3 +52,35 @@
         font-size: 42px
         margin-bottom: 8px
         display: block
+
+.zero
+    text-align: center
+    position: relative
+    padding-top: 200px
+    h2
+        font-size: 32px
+        margin-bottom: 16px
+
+    .container
+        background-image: linear-gradient(to right, rgb(134, 124, 255) -1.22%, rgb(174, 138, 255) 99.86%)
+        padding: 80px
+        border-radius: 16px
+
+    p
+        max-width: 580px
+        margin: 0 auto 32px
+
+    &__bg
+        font-size: 302px
+        line-height: 100%
+        -webkit-text-fill-color: #0000
+        background: -webkit-linear-gradient(270deg,#8a8a8a,#8a8a8a00)
+        -webkit-background-clip: text
+        font-weight: 600
+        opacity: 0.6
+        z-index: -1
+        position: relative
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
