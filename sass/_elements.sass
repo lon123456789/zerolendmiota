@@ -74,8 +74,13 @@ mark
     align-items: center
     justify-content: center
     padding: 0 16px
+    gap: 6px
     &:hover
         opacity: 1
+        img
+            display: block
+            margin-top: 2px
+            filter: invert(1)
 
 .btn
     font-weight: 600
@@ -89,6 +94,12 @@ mark
 
     &_link
         padding: 10px
+        img
+            margin-top: 2px
+            filter: invert(1)
+        &:hover
+            text-decoration: underline
+            opacity: .6
 
     &_outline
         border: 1px solid white
