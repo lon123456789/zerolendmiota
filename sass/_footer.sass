@@ -10,7 +10,7 @@
     h2
         line-height: 120%
     .col
-        max-width: 60%
+        max-width: 70%
     nav
         width: 174px
         a
@@ -35,13 +35,18 @@
         line-height: 90%
         z-index: -1
         margin: 0
-        opacity: .1
-        font-weight: 700
+        opacity: .15
+        font-weight: 800
         -webkit-text-fill-color: rgba(0,0,0,0)
         background: -webkit-linear-gradient(270deg, #8a8a8a 1%, rgba(138, 138, 138, 0)100%)
         -webkit-background-clip: text
+        @media screen and ( max-width: 1440px )
+            font-size: 255px
+        @media screen and ( max-width: 200px )
+            font-size: 163px
 
     @media screen and ( max-width: 760px )
+        padding-bottom: 200px
         .wrap 
             display: block
 
@@ -62,3 +67,7 @@
 
         &__text 
             margin-bottom: 22px
+
+        &__bg
+            font-size: 82px
+        

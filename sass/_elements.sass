@@ -75,11 +75,12 @@ mark
     justify-content: center
     padding: 0 16px
     gap: 6px
+    img
+        display: block
+        margin-top: 2px
     &:hover
         opacity: 1
         img
-            display: block
-            margin-top: 2px
             filter: invert(1)
 
 .btn
@@ -95,13 +96,13 @@ mark
     &_link
         padding: 10px
         img
-            margin-top: 2px
             filter: invert(1)
         &:hover
             text-decoration: underline
             opacity: .6
 
     &_outline
+        font-weight: 600
         border: 1px solid white
         &:hover
             color: black
@@ -136,6 +137,8 @@ select
     white-space: nowrap
 
 @media screen and ( max-width: 760px )
+    .h2, h2 
+        font-size: 28px
     .btn,
     .btn_outline,
     .btn_link
