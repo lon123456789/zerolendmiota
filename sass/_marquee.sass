@@ -1,0 +1,40 @@
+.marquee
+    text-align: center
+    position: relative
+    z-index: 1
+    display: flex
+    overflow: hidden
+    width: 100%
+    background-color: #000
+    // display: none
+    &-content
+        list-style: none
+        display: flex
+        justify-content: space-between
+        animation: scroll 30s linear infinite
+        overflow: hidden
+        flex-shrink: 0
+        &.reverce
+            animation: scroll 15s linear infinite reverse
+
+    &:hover
+        .marquee
+            &-content
+                animation-play-state: paused
+
+    li
+        margin: 0
+        padding: 5px 10px 
+        font-size: 12px
+        font-style: normal
+        font-weight: 600
+        line-height: 20px
+        a 
+            color: #fff
+
+@keyframes scroll
+    from
+        transform: translateX(0)
+
+    to
+        transform: translateX(calc(-100%))

@@ -1,0 +1,210 @@
+.pre
+    background-color: rgba(255, 255, 255, 0.1)
+    color: white
+    padding: 10px 32px
+    font-size: 12px
+    b
+        display: block
+
+    a
+        font-weight: bold
+        text-decoration: underline
+
+.main
+    background: linear-gradient(45deg, #30005E, #030C22, #050505, #080256)
+    background-size: 800% 800%
+    padding: 0 0 96px
+    animation: GradientBackground 10s ease infinite
+    &__heading
+        font-weight: 700
+        font-size: 32px
+        margin: 0 0 5px
+        img
+            display: inline-block
+            width: 30px
+            height: 30px
+            vertical-align: middle
+
+    &__text
+        font-weight: 600
+        line-height: 100%
+        font-size: 12px
+        color: #A5A8B6
+        margin: 0 0 16px
+
+    &-wrap
+        justify-content: flex-start
+        gap: 32px
+
+    &-item
+        text-align: left
+        margin: 0
+        span
+            display: block
+            font-size: 14px
+            color: rgb(165, 168, 182)
+            &:last-of-type
+                color: white
+                font-size: 22px
+                font-weight: bold
+                &:first-letter
+                    color: rgb(165, 168, 182)
+
+.assets
+    background-color: #F1F1F3
+    color: #303549
+    padding-top: 0
+    h2
+        font-size: 21px
+
+    .container
+        max-width: 1400px
+        border-radius: 4px
+        position: relative
+        top: -48px
+        padding: 16px 24px
+        background-color: #fff
+        border: 1px solid #EAEBEF
+        box-shadow: 0px 2px 1px rgb(0 0 0 / 5%), 0px 0px 1px rgb(0 0 0 / 25%)
+        min-height: 70vh
+        @media screen and ( max-width: 1500px )
+            max-width: 1238px
+
+    &-join
+        color: #383D51
+        padding: 16px
+        border-radius: 16px
+        background-color: #C9B3F94D
+        margin-bottom: 40px
+        p
+            font-size: 14px
+            max-width: 80%
+            margin: 0
+            line-height: normal
+        b
+            font-size: 18px
+            display: block
+
+    &-btn
+        text-align: center
+        padding: 6px 12px
+        color: #fff
+        border-radius: 4px
+        font-size: 14px
+        display: inline-block
+        background-color: rgb(39, 38, 76)
+
+    @media screen and ( max-width: 1140px )
+        h2
+            padding: 0 16px
+        &-join
+            border-radius: 0
+            p
+                font-size: 12px
+                margin-bottom: 24px
+            b
+                font-size: 14px
+
+        &-btn
+            width: 100%
+
+        .container
+            padding: 16px 0
+
+.table
+    &-header,
+    &-row
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 0
+
+    &-row
+        border-top: 1px solid rgb(234, 235, 239)
+
+    &__btn
+        font-size: 14px
+        padding: 6px 14px
+        color: rgb(39, 38, 76)
+        border: 1px solid rgb(234, 235, 239)
+        background-color: rgb(247, 247, 249)
+
+    &-item
+        .table__heading
+            display: none
+
+    &-item,
+    &__heading
+        display: block
+        flex: 1
+        min-width: 70px
+        text-align: center
+        &:first-child
+            text-align: left
+
+    &__text,
+    &__heading
+        display: block
+        font-size: 12px
+        padding: 4px
+
+    &-asset
+        display: flex
+        align-items: center
+        img
+            margin-right: 14px
+            width: 32px
+            height: 32px
+            object-fit: contain
+
+    @media screen and ( min-width: 1140px )
+        &-row
+            min-height: 76px
+            span
+                font-size: 12px
+                &::first-line
+                    font-weight: 600
+                    color: #000
+                    font-size: 16px
+
+    @media screen and ( max-width: 1140px )
+        &-header
+            display: none
+
+        &-row
+            display: block
+            padding: 16px 16px 24px
+            span
+                font-size: 12px
+                &::first-line
+                    color: #303549
+                    font-size: 14px
+
+        &-item
+            display: flex
+            margin-bottom: 12px
+            justify-content: space-between
+            .table__heading
+                display: block
+
+            &:nth-child(3)
+                padding-bottom: 12px
+                border-bottom: 1px solid #eaebef
+
+        &__text
+            text-align: right
+            &::first-line
+                font-weight: 500
+
+        &__btn
+            width: 100%
+
+        &-asset
+            justify-content: flex-start
+            margin-bottom: 16px
+
+@keyframes GradientBackground
+    0%, 100%
+        background-position: 0% 50%
+    50%
+        background-position: 100% 50%
