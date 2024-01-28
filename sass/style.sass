@@ -5,7 +5,7 @@
 .hero
     text-align: center
     min-height: 111vh
-    padding-bottom: 15vh
+    padding-bottom: 10vh
     flex-direction: column
     justify-content: center
     background-repeat: no-repeat
@@ -67,57 +67,93 @@
 .filter
     &-btns
         width: max-content
+        max-width: 100%
         margin: 0 auto
         box-shadow: 1px -1px #ffffff30
         justify-content: center
-        padding: 12px
+        padding: 15px
+        gap: 10px
         border-radius: 50px
-        position: relative
-        bottom: -30px
-        z-index: 111
         background-color: #000
+        margin-bottom: 30px
+        @media screen and ( min-width: 720px )
+            gap: 0
+            margin-bottom: 0
+            padding: 12px
+            position: relative
+            bottom: -30px
+            z-index: 111
+
     &__btn
         padding: 8px 24px
         margin: 0 8px
         border-radius: 50px
+        border: 1px solid #000
+        &:hover
+            border-color: rgba(255, 255, 255, .1)
         &.is_active
             background-color: #fff
             color: black
 
-    &-wrapper 
-        box-shadow: 1px -1px #ffffff30
-        border-radius: 169px
-        overflow: hidden
-        position: relative
-        z-index: 1
-        &::before,
-        &::after
-            content: ''
-            display: block
-            width: 1px
-            height: 100%
-            position: absolute
-            top: 0
-            left: -2px
-            box-shadow: 0 0 80px 70px #000
-            z-index: 111
-        &::after
-            left: auto 
-            right: -2px
-                
-    &-content
-        height: 258px
-        max-width: 98%
-        margin: 0 auto 
-        flex-wrap: nowrap
-        animation: anim 10s linear forwards infinite alternate-reverse
-        &:hover
-            animation-play-state: paused
+    @media screen and ( min-width: 720px )
+        &-wrapper
+            box-shadow: 1px -1px #ffffff30
+            border-radius: 169px
+            overflow: hidden
+            position: relative
+            z-index: 1
+            &::before,
+            &::after
+                content: ''
+                display: block
+                width: 1px
+                background-color: #000
+                height: 100%
+                position: absolute
+                top: 0
+                left: -3px
+                box-shadow: 0 0 80px 70px #000
+                z-index: 111
+            &::after
+                left: auto
+                right: -3px
 
-    &-item 
+    &-item
         width: 150px
         min-width: 150px
         margin: 0 24px
+        img
+            display: block
+            width: 100%
+            object-fit: contain
+
+        @media screen and ( max-width: 720px )
+            width: 120px
+            img
+                height: 70px
+
+    &-content
+        margin: 0 auto
+        height: 258px
+
+        @media screen and ( min-width: 720px )
+            flex-wrap: nowrap
+            animation: anim 20s linear forwards infinite alternate-reverse
+            &:hover
+                animation-play-state: paused
+
+    @media screen and ( max-width: 1000px )
+        &-content
+            height: 180px
+
+        &-item
+            width: 100px
+            min-width: 100px
+
+    @media screen and ( max-width: 720px )
+        &-content
+            height: unset
+            justify-content: center
 
 .zero, .security
     overflow: hidden
@@ -156,6 +192,7 @@
         margin: 0 auto 32px
 
     &__bg
+        text-align: center
         font-size: 302px
         line-height: 100%
         -webkit-text-fill-color: #0000
@@ -169,6 +206,16 @@
         top: 0
         left: 0
         width: 100%
+
+    @media screen and ( max-width: 1000px )
+        padding-top: 150px
+        &__bg
+            font-size: 200px
+
+    @media screen and ( max-width: 700px )
+        padding-top: 80px
+        &__bg
+            font-size: 100px
 
 .security
     padding: 80px 0
@@ -189,12 +236,11 @@
 
 @import 'footer'
 
-@keyframes anim 
+@keyframes anim
     0%
         transform: translateX(0)
     100%
         transform: translateX(-100%)
-        
 
 @media screen and ( max-width: 760px )
     .hero
