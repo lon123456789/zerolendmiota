@@ -54,6 +54,71 @@
         margin-bottom: 8px
         display: block
 
+.partners
+    text-align: center
+    h2
+        margin-bottom: 8px
+    p
+        font-size: 20px
+        opacity: 0.6
+        text-align: center
+        margin: 0 0 24px
+
+.filter
+    &-btns
+        width: max-content
+        margin: 0 auto
+        box-shadow: 1px -1px #ffffff30
+        justify-content: center
+        padding: 12px
+        border-radius: 50px
+        position: relative
+        bottom: -30px
+        z-index: 111
+        background-color: #000
+    &__btn
+        padding: 8px 24px
+        margin: 0 8px
+        border-radius: 50px
+        &.is_active
+            background-color: #fff
+            color: black
+
+    &-wrapper 
+        box-shadow: 1px -1px #ffffff30
+        border-radius: 169px
+        overflow: hidden
+        position: relative
+        z-index: 1
+        &::before,
+        &::after
+            content: ''
+            display: block
+            width: 1px
+            height: 100%
+            position: absolute
+            top: 0
+            left: -2px
+            box-shadow: 0 0 80px 70px #000
+            z-index: 111
+        &::after
+            left: auto 
+            right: -2px
+                
+    &-content
+        height: 258px
+        max-width: 98%
+        margin: 0 auto 
+        flex-wrap: nowrap
+        animation: anim 10s linear forwards infinite alternate-reverse
+        &:hover
+            animation-play-state: paused
+
+    &-item 
+        width: 150px
+        min-width: 150px
+        margin: 0 24px
+
 .zero, .security
     overflow: hidden
     text-align: center
@@ -124,6 +189,13 @@
 
 @import 'footer'
 
+@keyframes anim 
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(-100%)
+        
+
 @media screen and ( max-width: 760px )
     .hero
         min-height: 100vh
@@ -170,10 +242,10 @@
         h2
             font-size: 26px
             margin-bottom: 8px
-            
+
     .security
         .wrap
             display: block
-            a 
+            a
                 max-width: 60%
                 padding: 5px
