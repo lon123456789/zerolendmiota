@@ -48,6 +48,9 @@
         <a href="./connect.html">Rewards</a>
         <a href="./connect.html">Docs</a>
         <a href="./connect.html">Bridge</a>
+        <a href="./connect.html">Bridge</a>
+
+        <a class="ext" href="#">Connect wallet</a>
     </nav>
 
     <main class="main">
@@ -265,9 +268,37 @@
         </nav>
         <div class="wrap right">
             <a href="#" class="link"><img src="img/tw.svg" alt=""></a>
-            <a href="#" class="assets-btn">Mirrors</a>
+            <div class="mirrors tgl">
+                <button class="assets-btn tgl_btn">Mirrors</button>
+                <div class="mirrors-content tgl_cont">
+                    <span class="mirrors__heading">Mirrors</span>
+                    <span class="mirrors__text">Available centralized (web2) and decentralized (web3) website
+                        mirrors.</span>
+                    <span class="mirrors__label">Centralized:</span>
+                    <a href="#">app.zerolend.xyz</a>
+                    <hr>
+                    <span class="mirrors__label">Decentralized:</span>
+                    <a href="#">zerolend.eth.limo</a>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <script>
+        document.querySelectorAll('.tgl_btn').forEach(function (tgl) {
+            tgl.addEventListener('click', function () {
+                tgl.nextElementSibling.classList.toggle('is_active');
+            });
+        });
+        document.addEventListener('click', function (e) {
+            var tg = e.target.parentElement.classList;
+            if (!tg.contains('tgl') && !tg.contains('tgl_cont')) {
+                document.querySelectorAll('.tgl_cont').forEach(function (tgl_cont) {
+                    tgl_cont.classList.remove('is_active');
+                });
+            }
+        })
+    </script>
 
 
 </body>

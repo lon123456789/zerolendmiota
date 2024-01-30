@@ -5,10 +5,8 @@ html, body
     line-height: 1.5
     color: #fff
     background-color: #F1F1F3
-
     font-size: 16px
     font-family: 'Manrope', sans-serif
-    // scroll-behavior: smooth
     position: relative
     z-index: 1
 
@@ -27,6 +25,11 @@ html, body
         border-bottom: 1px solid rgba(0, 0, 0, 0)
         &.active
             border-color: #fff
+
+    .ext 
+        margin-left: auto 
+        &:hover
+            text-decoration: underline
 
     @media screen and ( max-width: 362px )
         padding: 8px 15px 0
@@ -221,7 +224,7 @@ html, body
         border-radius: 4px
         display: inline-block
         margin-top: 1px
-        img 
+        img
             display: inline-block
             width: 12px
             height: 12px
@@ -273,6 +276,84 @@ html, body
         &-asset
             justify-content: flex-start
             margin-bottom: 16px
+
+.mirrors
+    position: relative
+    z-index: 1
+    .assets-btn
+        &::after
+            content: ''
+            display: inline-block
+            width: 20px
+            height: 20px
+            vertical-align: middle
+            background-image: url('../img/arrow_down.svg')
+            background-size: contain
+            background-repeat: no-repeat
+            transform: scaleY(-1)
+            
+    &-content
+        position: absolute
+        bottom: 0
+        right: 0
+        z-index: 11
+        padding: 14px 16px
+        color: rgb(48, 53, 73)
+        border: 1px solid rgb(234, 235, 239)
+        box-shadow: rgb(0 0 0 / 20%) 0px 0px 2px, rgb(0 0 0 / 10%) 0px 2px 10px
+        background-color: rgb(255, 255, 255)
+        width: 230px
+        visibility: hidden
+        opacity: 0
+        transform: scale(.8)
+        transition: all ease .3s
+        transform-origin: 100% 100%
+
+        &.is_active
+            visibility: visible
+            opacity: 1
+            transform: scale(1)
+
+    &__heading
+        font-weight: 600
+        line-height: 1.25
+        font-size: 14px
+        color: rgb(56, 61, 81)
+        margin-bottom: 3px
+
+    span
+        display: block
+        font-size: 12px
+
+    &__text
+        color: rgb(165, 168, 182)
+        margin-bottom: 14px
+        font-weight: 500
+
+    &__label
+        letter-spacing: 0.00625rem
+        line-height: 1rem
+        font-size: 0.75rem
+        color: rgb(56, 61, 81)
+
+    hr
+        margin: 2px 0 8px
+        height: 1px
+        width: 100%
+        background-color: rgb(234, 235, 239)
+
+    a
+        display: block
+        color: rgb(48, 53, 73)
+        font-weight: 600
+        font-size: 14px
+        padding: 12px 16px 12px 0
+        background-repeat: no-repeat
+        background-position: center right
+        background-image: url('../img/link.svg')
+        background-size: 20px auto
+        &:hover
+            text-decoration: underline
 
 @import 'footer_2'
 
