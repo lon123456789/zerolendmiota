@@ -8,7 +8,8 @@
     <meta name="theme-color" content="#baa7ed">
     <link rel="icon" type="image/svg" href="./favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
-
+    
+    <link rel="stylesheet" href="./css/statistic.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -46,7 +47,8 @@
     <section class="info">
         <div class="container">
             <h2>What is Zero Gravity?</h2>
-            <p class="">Zero Gravity is an airdrop campaign to distribute the $ZERO drop. The greater your points total, the
+            <p class="">Zero Gravity is an airdrop campaign to distribute the $ZERO drop. The greater your points total,
+                the
                 larger your $ZERO allocation.</p>
 
             <p class="wrap info-header">
@@ -96,6 +98,14 @@
         </div>
     </section>
 
+    <section class="stat">
+        <div class="container">
+            <h2>Real-time AirDrop statistic</h2>
+            <table class="table">
+                <tbody class="pay-container"></tbody>
+            </table>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container wrap">
@@ -118,35 +128,7 @@
         <p class="footer__bg">ZeroLend</p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const filterBtns = document.querySelectorAll('.filter__btn');
-            const filterItems = document.querySelectorAll('.filter-item');
-
-            filterBtns.forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    const filterValue = btn.getAttribute('data-filter-btn');
-
-                    // Remove active class from all buttons
-                    filterBtns.forEach(function (btn) {
-                        btn.classList.remove('is_active');
-                    });
-
-                    // Add active class to the clicked button
-                    btn.classList.add('is_active');
-
-                    // Filter items based on the selected filter
-                    filterItems.forEach(function (item) {
-                        const dataFilter = item.getAttribute('data-filter');
-
-                        if (filterValue === 'all' || filterValue === dataFilter) {
-                            item.classList.remove('hide');
-                        } else { item.classList.add('hide'); }
-                    });
-                });
-            });
-        });
-    </script>
+    <script src="./js/pay.js"></script>
 
 </body>
 
