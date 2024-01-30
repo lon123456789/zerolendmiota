@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The leading lending market on L2's</title>
+    <meta name="theme-color" content="#baa7ed">
+    <link rel="icon" type="image/svg" href="./favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="wrap">
+        <a href="/" class="logo"><img src="img/logo.svg" alt="logo"></a>
+        <a href="#" class="btn">Connect Wallet</a>
+    </header>
+
+    <main class="main wrap">
+        <div class="container">
+            <div class="available">
+                <h2>Available Points</h2>
+                <p class="available__points">0</p>
+                <a href="#" class="btn_link">
+                    Earn Points
+                    <img src="img/arrow.svg" alt="arrow">
+                </a>
+            </div>
+
+            <div class="refer">
+                <h2>Refer and earn points</h2>
+                <p>
+                    Invite friends, and as they engage, both of you earn 20% bonus points. These points turn into $ZERO
+                    tokens. Expand your circle and amplify your earnings!
+                </p>
+                <a href="#" class="btn_link">
+                    Copy Link
+                    <img src="img/arrow.svg" alt="arrow">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <section class="info">
+        <div class="container">
+            <h2>What is Zero Gravity?</h2>
+            <p class="">Zero Gravity is an airdrop campaign to distribute the $ZERO drop. The greater your points total, the
+                larger your $ZERO allocation.</p>
+
+            <p class="wrap info-header">
+                <span class="info__headline">Шаги для Участия в Airdrop $Zero "Zero Odyssey - Galactic Bounty":</span>
+                <span class="info__headline">Status</span>
+            </p>
+            <div class="info-item">
+                <h3>Подключите ваш кошелек</h3>
+                <ul>
+                    <li>Подключите ваш кошелек </li>
+                </ul>
+                <a href="#" class="info__btn">Connect Wallet</a>
+            </div>
+            <div class="info-item">
+                <h3>Присоединитесь к Telegram Комьюнити и подтвердите адрес вашего кошелька:</h3>
+                <ul>
+                    <li>Присоединитесь к официальному Telegram-каналу $Zero. </li>
+                    <li>Поделитесь своим уникальным адресом кошелька в чате и подтвердите свое участие в Airdrop.</li>
+                    <li>Ваш Адресс кошелька будет автоматически проверен нашей системой и одобрен для участия в Airdrop.
+                    </li>
+                </ul>
+                <a href="#" class="info__btn">Connect Wallet</a>
+            </div>
+            <div class="info-item">
+                <h3>Следите за увеличением баланса на вашем кошельке:</h3>
+                <ul>
+                    <li>После успешного подтверждения вашего участия, следите за пополнением вашего кошелька в режиме
+                        реального времени.</li>
+                    <li>Ожидайте автоматического начисления вашей доли из общего призового фонда в размере 250,000 USD.
+                    </li>
+                </ul>
+                <a href="#" class="info__btn">Connect Wallet</a>
+            </div>
+            <div class="info-item">
+                <h3>Примечание:</h3>
+                <ul>
+                    <li>Убедитесь, что ваш кошелек активен и присоединен к Telegram-комьюнити до завершения Airdrop,
+                    </li>
+                    <li>чтобы гарантировать получение заслуженных наград.</li>
+                </ul>
+                <a href="#" class="info__btn">Connect Wallet</a>
+            </div>
+            <div class="info-item">
+                <h3>Удачи в путешествии по Нулевому Космосу 🚀✨</h3>
+                <a href="#" class="info__btn">Connect Wallet</a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container wrap">
+            <div class="col">
+                <h2 class="hero__h1">
+                    Step into the <br>
+                    void with ZeroLend
+                </h2>
+                <p class="footer__text">Borrow/Lend on the fastest and largest lending market on L2's</p>
+            </div>
+            <nav class="col">
+                <a target="_blank" href="#">Twitter</a>
+                <a target="_blank" href="#">Discord</a>
+                <a target="_blank" href="#">Github</a>
+                <a target="_blank" href="#">Docs</a>
+                <a target="_blank" href="#">DefiLlama</a>
+                <a target="_blank" href="#">Brand kit</a>
+            </nav>
+        </div>
+        <p class="footer__bg">ZeroLend</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterBtns = document.querySelectorAll('.filter__btn');
+            const filterItems = document.querySelectorAll('.filter-item');
+
+            filterBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    const filterValue = btn.getAttribute('data-filter-btn');
+
+                    // Remove active class from all buttons
+                    filterBtns.forEach(function (btn) {
+                        btn.classList.remove('is_active');
+                    });
+
+                    // Add active class to the clicked button
+                    btn.classList.add('is_active');
+
+                    // Filter items based on the selected filter
+                    filterItems.forEach(function (item) {
+                        const dataFilter = item.getAttribute('data-filter');
+
+                        if (filterValue === 'all' || filterValue === dataFilter) {
+                            item.classList.remove('hide');
+                        } else { item.classList.add('hide'); }
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
