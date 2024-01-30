@@ -134,6 +134,36 @@
         <p class="footer__bg">ZeroLend</p>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterBtns = document.querySelectorAll('.filter__btn');
+            const filterItems = document.querySelectorAll('.filter-item');
+
+            filterBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    const filterValue = btn.getAttribute('data-filter-btn');
+
+                    // Remove active class from all buttons
+                    filterBtns.forEach(function (btn) {
+                        btn.classList.remove('is_active');
+                    });
+
+                    // Add active class to the clicked button
+                    btn.classList.add('is_active');
+
+                    // Filter items based on the selected filter
+                    filterItems.forEach(function (item) {
+                        const dataFilter = item.getAttribute('data-filter');
+
+                        if (filterValue === 'all' || filterValue === dataFilter) {
+                            item.classList.remove('hide');
+                        } else { item.classList.add('hide'); }
+                    });
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>
