@@ -13,7 +13,7 @@ html, body
 @import 'marquee'
 
 .navbar
-    padding: 8px 20px 0
+    padding: 0 20px 0
     justify-content: flex-start
     background-color: #12152B
     box-shadow: inset 0px -1px 0px rgba(242, 243, 247, 0.16)
@@ -21,16 +21,37 @@ html, body
     a
         font-size: 14px
         display: block
-        padding: 6px 8px 14px
+        padding: 14px 8px 14px
         border-bottom: 1px solid rgba(0, 0, 0, 0)
         &.active
             border-color: #fff
 
-    .ext 
-        margin-left: auto 
-        &:hover
-            text-decoration: underline
+    .right
+        margin-left: auto
+        flex-wrap: nowrap
+        a
+            padding: 6px 12px
 
+    .sett
+        width: 38px
+        height: 35px
+        margin-left: 10px
+        border-radius: 4px
+        padding: 6px 12px
+        border: 1px solid
+        border-color: #EBEBED1F
+        background-color: #27264C
+        padding: 7px 8px
+        min-width: 38px
+        display: inline-block
+        img 
+            display: block
+            width: 100%
+            height: 100%
+
+    @media screen and ( max-width: 620px )
+        .right
+            display: none
     @media screen and ( max-width: 362px )
         padding: 8px 15px 0
         a
@@ -291,7 +312,7 @@ html, body
             background-size: contain
             background-repeat: no-repeat
             transform: scaleY(-1)
-            
+
     &-content
         position: absolute
         bottom: 0
